@@ -1,8 +1,11 @@
 import pickle
 import pandas as pd, numpy as np
 from sklearn.linear_model import LinearRegression
+import sklearn
 
 print(f"Pandas version {pd.__version__}")
+print(f"Numpy version {np.__version__}")
+print(f"Sklearn version {sklearn.__version__}")
 
 
 def data_processing():
