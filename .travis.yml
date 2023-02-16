@@ -3,7 +3,7 @@ language: python
 matrix:
   include:
     - os: windows
-      language: python
+      language: sh
       python: "3.7"
       before_install:
         - choco install python3
