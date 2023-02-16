@@ -1,0 +1,15 @@
+language: python
+
+python:
+  - "3.5"
+  - "3.6"
+  - "3.8"
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - python example_prediction.py
+
+after_success:
+  - echo "Successfull."
