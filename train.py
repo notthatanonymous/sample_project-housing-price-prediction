@@ -2,6 +2,8 @@ import pickle
 import pandas as pd, numpy as np
 from sklearn.linear_model import LinearRegression
 
+print(f"Pandas version {pd.__version__}")
+
 
 def data_processing():
     df = pd.read_csv('assets/ames.csv')
