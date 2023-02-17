@@ -2,7 +2,9 @@ import pickle
 import pandas as pd, numpy as np
 from sklearn.linear_model import LinearRegression
 import sklearn
+import sys
 
+print(f"Python version {sys.version}")
 print(f"Pandas version {pd.__version__}")
 print(f"Numpy version {np.__version__}")
 print(f"Sklearn version {sklearn.__version__}")
