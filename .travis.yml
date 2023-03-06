@@ -22,8 +22,8 @@ install:
 # 'python3' is a 'command not found' error on Windows but 'py' works on Windows only
 
 script:
-  - python3 train.py || python train.py
-  - python3 example_prediction.py || python example_prediction.py
+  - python3 train.py 5 lin_reg || python train.py 5 lin_reg
+#  - python3 example_prediction.py || python example_prediction.py
 
 after_success:
   - echo "Successfull."
