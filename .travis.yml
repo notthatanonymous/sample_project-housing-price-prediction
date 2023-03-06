@@ -22,7 +22,7 @@ install:
 # 'python3' is a 'command not found' error on Windows but 'py' works on Windows only
 
 script:
-  - python3 train.py 10 nn 1200 || python train.py 10 nn 1200
+  - python3 train.py 5 rf 1000 || python train.py 5 rf 1000
 #  - python3 example_prediction.py || python example_prediction.py
 
 after_success:
