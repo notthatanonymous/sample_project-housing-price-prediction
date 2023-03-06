@@ -72,6 +72,22 @@ def nn_model_training(X_train, y_train):
 
     return model
 
+
+def rf_model_training(X_train, y_train):
+    model = sklearn.ensemble.RandomForestRegressor()
+
+    model.fit(X_train, y_train)
+
+    return model
+
+def svm_model_training(X_train, y_train):
+    model = sklearn.svm.SVR()
+
+    model.fit(X_train, y_train)
+
+    return model
+
+
 def save_model(trained_model):
     pickle.dump(trained_model, open('assets/model.p', 'wb'))
 
@@ -80,6 +96,7 @@ def make_prediction(data_array):
     model = pickle.load(open('assets/model.p', 'rb'))
     pred = model.predict(data_array)
     return  pred
+
 
 if __name__ == '__main__':
 
@@ -96,6 +113,12 @@ if __name__ == '__main__':
 
     elif sys.argv[2] == "knn":
         save_model(knn_model_training(X.iloc[:int(sys.argv[3]), :], y[:int(sys.argv[3])]))
+
+    elif sys.argv[2] == "rf":
+        save_model(rf_model_training(X.iloc[:int(sys.argv[3]), :], y[:int(sys.argv[3])]))
+
+    elif sys.argv[2] == "svm":
+        save_model(svm_model_training(X.iloc[:int(sys.argv[3]), :], y[:int(sys.argv[3])]))
 
     else:
         save_model(nn_model_training(X.iloc[:int(sys.argv[3]), :], y[:int(sys.argv[3])]))
