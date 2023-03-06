@@ -4,6 +4,7 @@ from sklearn.linear_model import LinearRegression
 import sklearn
 import sys, platform
 from sklearn.neural_network import MLPRegressor
+from sklearn.ensemble import RandomForestRegressor
 
 
 def data_processing():
@@ -75,7 +76,7 @@ def nn_model_training(X_train, y_train):
 
 
 def rf_model_training(X_train, y_train):
-    model = sklearn.ensemble.RandomForestRegressor()
+    model = RandomForestRegressor()
 
     model.fit(X_train, y_train)
 
