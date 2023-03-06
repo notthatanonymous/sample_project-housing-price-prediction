@@ -3,6 +3,7 @@ import pandas as pd, numpy as np
 from sklearn.linear_model import LinearRegression
 import sklearn
 import sys, platform
+from sklearn.neural_network import MLPRegressor
 
 
 def data_processing():
@@ -66,7 +67,7 @@ def knn_model_training(X_train, y_train):
 
 
 def nn_model_training(X_train, y_train):
-    model = sklearn.neural_network.MLPRegressor()
+    model = MLPRegressor()
 
     model.fit(X_train, y_train)
 
@@ -79,6 +80,7 @@ def rf_model_training(X_train, y_train):
     model.fit(X_train, y_train)
 
     return model
+
 
 def svm_model_training(X_train, y_train):
     model = sklearn.svm.SVR()
