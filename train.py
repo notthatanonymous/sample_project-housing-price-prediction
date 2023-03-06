@@ -92,7 +92,7 @@ if __name__ == '__main__':
     X, y = data_processing()
 
     if sys.argv[2] == "lin_reg":
-        save_model(lin_reg_model_training(X.iloc[:int(sys.argv[3]), :], int(sys.argv[3])))
+        save_model(lin_reg_model_training(X.iloc[:int(sys.argv[3]), :], y[:int(sys.argv[3])]))
 
     elif sys.argv[2] == "knn":
         save_model(knn_model_training(X.iloc[:int(sys.argv[3]), :], y[:int(sys.argv[3])]))
