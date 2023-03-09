@@ -71,7 +71,7 @@ def nn_model_training(X_train, y_train):
     model = MLPRegressor(random_state=42, max_iter=1000)
 
     model.fit(X_train, y_train)
-
+    print(model.n_iter_)
     return model
 
 
@@ -128,5 +128,5 @@ if __name__ == '__main__':
 
     r2 = sklearn.metrics.r2_score(make_prediction(X.iloc[int(sys.argv[3]):, :]), y[int(sys.argv[3]):])
 
-    print([platform.system(), platform.uname() , sys.version.split(" (")[0], pd.__version__, np.__version__, sklearn.__version__,
+    print([platform.system(), platform.uname(), sys.version.split(" (")[0], pd.__version__, np.__version__, sklearn.__version__,
            sys.argv[1], sys.argv[2], sys.argv[3], X.shape[0] - int(sys.argv[3]), r2])
