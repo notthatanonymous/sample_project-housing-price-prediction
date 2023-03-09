@@ -4,6 +4,7 @@ jobs:
   include:
     - name: "Python 3.7 on Xenial Linux"
       python: 3.7           # this works for Linux but is ignored on macOS or Windows
+      arch: arm64
     - name: "Python 3.7 on macOS"
       os: osx
       osx_image: xcode11.5  # Python 3.7 running on macOS 10.14.4
