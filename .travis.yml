@@ -10,7 +10,7 @@ jobs:
       arch: amd64
     - name: "Python 3.7 on Xenial Linux"
       python: 3.7           # this works for Linux but is ignored on macOS or Windows
-      arch: ppc64le
+      arch: s390x
     - name: "Python 3.7 on macOS"
       os: osx
       osx_image: xcode11.5  # Python 3.7 running on macOS 10.14.4
@@ -29,7 +29,7 @@ install:
 # 'python3' is a 'command not found' error on Windows but 'py' works on Windows only
 
 script:
-  - python3 train.py 15 knn 1000 || python train.py 15 knn 1000
+  - python3 train.py 15 rf 1000 || python train.py 15 rf 1000
 #  - python3 example_prediction.py || python example_prediction.py
 
 after_success:
