@@ -68,7 +68,7 @@ def knn_model_training(X_train, y_train):
 
 
 def nn_model_training(X_train, y_train):
-    model = MLPRegressor(random_state=42)
+    model = MLPRegressor(random_state=42, max_iter=1000)
 
     model.fit(X_train, y_train)
 
@@ -98,7 +98,7 @@ def save_model(trained_model):
 def make_prediction(data_array):
     model = pickle.load(open('assets/model.p', 'rb'))
     pred = model.predict(data_array)
-    return  pred
+    return pred
 
 
 if __name__ == '__main__':
