@@ -10,6 +10,11 @@ jobs:
       arch: amd64
     - name: "Python 3.7 on Xenial Linux"
       python: 3.7           # this works for Linux but is ignored on macOS or Windows
+      arch: arm64-graviton2
+      virt: lxd
+      group: edge
+    - name: "Python 3.7 on Xenial Linux"
+      python: 3.7           # this works for Linux but is ignored on macOS or Windows
       arch: s390x
     - name: "Python 3.7 on macOS"
       os: osx
