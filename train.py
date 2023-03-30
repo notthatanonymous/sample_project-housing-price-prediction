@@ -68,7 +68,7 @@ def knn_model_training(X_train, y_train):
 
 
 def nn_model_training(X_train, y_train):
-    model = MLPRegressor(random_state=42, max_iter=1000)
+    model = MLPRegressor(random_state=None, max_iter=1000)
 
     model.fit(X_train, y_train)
     print(model.n_iter_)
