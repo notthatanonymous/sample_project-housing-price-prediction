@@ -76,7 +76,7 @@ def nn_model_training(X_train, y_train):
 
 
 def rf_model_training(X_train, y_train):
-    model = RandomForestRegressor(random_state=42)
+    model = RandomForestRegressor(random_state=None)
 
     model.fit(X_train, y_train)
 
